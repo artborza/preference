@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2">
+            <div *ngFor="let i of items">
+                <app-menu-side-bar-component [item]="i" (Onselected)="selectItem($event)"></app-menu-side-bar-component>
+                <div *ngIf="i.isChecked==true">
+                    <app-menu-side-bar-sub-component *ngFor="let j of itemsSub" (Onselected2)="selectItem2($event)" [item]="j">
+                    </app-menu-side-bar-sub-component>
+                </div>
+            </div>
+        </div>
+        <div *ngFor="let i of items">
+            <p *ngIf="i.isChecked==true" style="text-align: center;padding-top: 10px;font-size: 16px;">{{i.name}}</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<mat-tab-group style="margin-bottom: 0px;">
+    <div *ngFor="let i of items">
+        <mat-tab label="{{i.name}}" (click)="selectTab()">
+        </mat-tab>
+    </div>
+</mat-tab-group>
+
+<app-side-nav></app-side-nav>
